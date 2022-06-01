@@ -1,9 +1,46 @@
-#content {
+#titulo {
   margin-left: auto;
   margin-right: auto;
   width: 650px;
+  font-family:courier, monospace;
+  text-align:center;
+}
+
+#contenido{
+  margin-left: auto;
+  margin-right: auto;
+  width: 700px;
+  font-family:courier, monospace;
+  text-align:justify;
 }
 
 #greeting-container {
   margin-top: 20px;
+  text-align:center;
 }
+
+
+.yo {
+    width: 288px;
+    height: 512px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.paul{
+    width: 384px;
+    height: 512px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.row {
+    display: flex;
+  }
+  
+.column {
+    flex: 50%;
+    padding: 5px;
+  }
