@@ -17,7 +17,7 @@
  */
 function addRandomGreeting() {
   const greetings =
-      ['Hello world!', '¡Hola Mundo!', '你好，世界！', 'Bonjour le monde!'];
+      ['For 7 years i lived in Guatemala', 'I live alone in Mexico', 'My favorite movie is interestellar', 'Im studying Software Ingeneering at Tecnologico de Monterrey', 'I have created a 2D & 3D games'];
 
   // Pick a random greeting.
   const greeting = greetings[Math.floor(Math.random() * greetings.length)];
@@ -26,3 +26,31 @@ function addRandomGreeting() {
   const greetingContainer = document.getElementById('greeting-container');
   greetingContainer.innerText = greeting;
 }
+
+
+async function showServerTime() {
+    const responseFromServer = await fetch('/date');
+    const textFromResponse = await responseFromServer.text();
+  
+    const dateContainer = document.getElementById('date-container');
+    dateContainer.innerText = textFromResponse;
+  }
+  
+
+window.addEventListener("scroll", function(){
+    const logoImage = document.querySelector(".logo img");
+    const mainNav = this.document.getElementById("mainNav");
+
+    if(window.pageYOffset > 0){
+        logoImage.style.height ="64px";
+        mainNav.classList.add("bg-black");
+        mainNav.classList.add("txt-white");
+
+    }
+    else{
+        logoImage.style.height = "84px";
+        mainNav.classList.remove("bg-black");
+        mainNav.classList.remove("txt-white");
+    }
+
+})

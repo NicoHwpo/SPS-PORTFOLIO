@@ -2,18 +2,73 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>My Portfolio</title>
+    <title>Nicolas Aguirre's Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
   </head>
-  <body>
-    <div id="content">
-      <h1>My Portfolio</h1>
-      <p>This is my portfolio.</p>
-      <p>Click <a href="/hello">here</a> to see content created by server code.</p>
-      <p>Click here to get a random message:</p>
-      <button onclick="addRandomGreeting()">Hello</button>
-      <div id="greeting-container"></div>
-    </div>
-  </body>
+
+
+
+<body>
+    <nav id="mainNav">
+        <div class="logo">
+            <a href="#">
+                <img src="images/Logoo.png" alt="Logo">
+            </a>
+        </div>
+        <ul>
+            <li>
+                <a href="#">Projects</a>
+            </li>
+            <li>
+                <a href="#">Photo Album</a>
+            </li>
+            <li>
+                <a href="#">nose</a>
+            </li>
+            <li>
+                <a href="#">Contact me</a>
+            </li>
+        </ul>
+    </nav>
+    <section>Sec1</section>
+    <section>Sec2</section>
+    <section>Sec3</section>
+
+
+    <!--<div id="titulo">
+        <h1>Nicolas Aguirre</h1>
+        <p>This is my portfolio.</p>
+      </div> -->
+      <div id="contenido">
+        <p>Hi, i'm Nicolas, i'm from Colombia and I am 18 years old. Right now i'm living in Monterrey, Mexico since i'm in my 2nd year of university. 
+      I like a lot to learn new things (mostly computer based things) and also I love to do a lot of exercise.
+      I've been coding since my fist year of Highschool (15 y/o).</p>
+  
+  
+      <div class="row">
+          <div class="column">
+              <p align="center" style="font-size: 90%;">This is a picture of me in <br> Guatemala on vacations.</p>
+          <img src="/images/yo.jpeg" class="yo"/>
+          </div>
+          <div class="column">
+              <p align="center" style="font-size: 90%;">This is a picture of my cute cat, <br>his name is Paul.</p>
+          <img src="/images/paul.jpeg" class="paul"/>
+          </div>
+      </div>
+        <p>Click <a href="/hello">here</a> to see content created by server code.</p>
+        <p>Click here to get a random fact about my self :)</p>
+        <button onclick="addRandomGreeting()" style="position:absolute">Fact</button>
+        <div id="greeting-container"></div>
+        <br>
+        <button onclick="showServerTime();">
+          Get date
+        </button>
+        <p id="date-container"></p>
+        <p>Click <a href="/hello">here</a> to see the server response directly.<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+  
+      </div>
+
+    <footer>This website is design by Nicolas Aguirre</footer>
+</body>
 </html>
