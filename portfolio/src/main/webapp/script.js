@@ -45,7 +45,7 @@ window.addEventListener("scroll", function(){
     if(window.pageYOffset > 0){
         logoImage.style.height ="64px";
         sideNav.style.marginTop = "60px";
-        document.getElementById("LogoN").src = "images/logofb.png";
+        document.getElementById("LogoN").src = "images/logos/logofb.png";
         document.getElementById("insta").src = "images/logos/inst.png";
         document.getElementById("linke").src = "images/logos/lin.png";
         document.getElementById("spot").src = "images/logos/spot.png";
@@ -60,7 +60,7 @@ window.addEventListener("scroll", function(){
     else{
         logoImage.style.height = "84px";
         sideNav.style.marginTop = "80px";
-        document.getElementById("LogoN").src = "images/logofn.png";
+        document.getElementById("LogoN").src = "images/logos/logofn.png";
         document.getElementById("insta").src = "images/logos/instN.png";
         document.getElementById("linke").src = "images/logos/linN.png";
         document.getElementById("spot").src = "images/logos/spotN.png";
