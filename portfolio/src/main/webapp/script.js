@@ -39,18 +39,38 @@ async function showServerTime() {
 
 window.addEventListener("scroll", function(){
     const logoImage = document.querySelector(".logo img");
-    const mainNav = this.document.getElementById("mainNav");
+    const mainNav = document.getElementById("mainNav");
+    const sideNav = document.getElementById("sidenav")
 
     if(window.pageYOffset > 0){
         logoImage.style.height ="64px";
+        sideNav.style.marginTop = "60px";
+        document.getElementById("LogoN").src = "images/logos/logofb.png";
+        document.getElementById("insta").src = "images/logos/inst.png";
+        document.getElementById("linke").src = "images/logos/lin.png";
+        document.getElementById("spot").src = "images/logos/spot.png";
+        document.getElementById("disc").src = "images/logos/discord.png";
+        document.getElementById("gmail").src = "images/logos/gmail.png";
+        document.getElementById("git").src = "images/logos/git.png";
         mainNav.classList.add("bg-black");
         mainNav.classList.add("txt-white");
+        sideNav.classList.add("bg-black");
 
     }
     else{
         logoImage.style.height = "84px";
+        sideNav.style.marginTop = "80px";
+        document.getElementById("LogoN").src = "images/logos/logofn.png";
+        document.getElementById("insta").src = "images/logos/instN.png";
+        document.getElementById("linke").src = "images/logos/linN.png";
+        document.getElementById("spot").src = "images/logos/spotN.png";
+        document.getElementById("disc").src = "images/logos/discordN.png";
+        document.getElementById("gmail").src = "images/logos/gmailN.png";
+        document.getElementById("git").src = "images/logos/gitN.png";
         mainNav.classList.remove("bg-black");
         mainNav.classList.remove("txt-white");
+        sideNav.classList.remove("bg-black");
+
     }
 
 })

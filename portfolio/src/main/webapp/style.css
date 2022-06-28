@@ -4,7 +4,6 @@
     padding: 0;
 }
 
-
 body{
     font-family: Lucida, monospace;
 }
@@ -15,12 +14,13 @@ body{
 }
 
 .bg-black{
-    background: #333 !important; 
+    background: #122836 !important; 
 }
 
 .txt-white a{
     color: #eee !important;
 }
+
 
 #mainNav{
     display: flex;
@@ -31,19 +31,24 @@ body{
     top: 0px;
     background: #eee;
     transition: background .4s;
+    z-index: 99;
 }
 
 section:nth-of-type(1){
     margin-top: 84px;
+    height: 400px;   
 }
 
+section:nth-of-type(2){
+    scroll-margin-top: 68px;
+    position: auto;
+}
 
 section{
     height: 300px;
-    padding: 16px;
+    padding: 16px 100px;
     font-size: 20px;
 }
-
 
 section:nth-last-of-type(odd){
     background: #eee;
@@ -52,7 +57,7 @@ section:nth-last-of-type(odd){
 
 
 section:nth-last-of-type(even){
-    background: #333;
+    background: #122836;
     color: #eee;
 }
 
@@ -71,7 +76,7 @@ footer{
     list-style: none;
     display: flex;
     align-items: center;
-    width: 400px;
+    width: 800px;
     justify-content: space-around;
 }
 
@@ -82,19 +87,131 @@ footer{
     transition: color .4s;
 }
 
+
+.carousel{
+    padding: 10px;
+    background: #fff;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 50px 4px;
+    border-radius: 8px;
+    max-width: 900px;
+    width: 85vw;
+    margin: auto;
+    margin-top: 8px;
+    overflow-x: hidden;
+}
+
+.images-container{
+    display: flex;
+    gap: 40px;
+    animation: 120s slide_animation infinite;
+}
+
+.images-container img{
+    height: 281px;
+    width: 500px;
+}
+
+@keyframes slide_animation{
+    0% {transform: translateX(0%);}
+    5% {transform: translateX(-65.5%);}
+    10% {transform: translateX(-131%);}
+    15% {transform: translateX(-196.5%);}
+    20% {transform: translateX(-262%);}
+    25% {transform: translateX(-327.5%);}
+    30% {transform: translateX(-393%);}
+    35% {transform: translateX(-458.5%);}
+    40% {transform: translateX(-524%);}
+    45% {transform: translateX(-589.5%);}
+    50% {transform: translateX(-650%);}
+    55% {transform: translateX(-589.5%);}
+    60% {transform: translateX(-524%);}
+    65% {transform: translateX(-458.5%);}
+    70% {transform: translateX(-393%);}
+    75% {transform: translateX(-327.5%);}
+    80% {transform: translateX(-262%);}
+    85% {transform: translateX(-196.5%);}
+    90% {transform: translateX(-131%);}
+    95% {transform: translateX(-65.5%);}
+    100% {transform: translateX(0%);}
+}
+
+#sidenav {
+    height: 100%; 
+    width: 3%;
+    position: fixed; 
+    z-index: 1;
+    top: 0; 
+    left: 0;
+    background: #eee;
+    transition: background .4s;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding: 8% 0px;
+    transition: margin-top .4s;
+  }
+
+ #sidenav img{
+    max-width: 100%;
+    padding: 0px 4px;
+    margin: 0px 0px 50px;
+}
+
+
+.first-column {
+    width: 3%;
+    float: left;
+}
+
+.second-column {
+    width: 97%;
+    float: right;
+}
+
+
 #titulo {
-  /*
-  width: 650px;
-  
-  padding: 60px;*/
-    background: rgb(183, 184, 183);
-    color: white;
-    font-size: 30px;
+    color: #333;
+    font-size: 50px;
     font-family: Lucida, monospace;
     text-align:center;
-    /*position: sticky;*/
-    top: 0;
-    
+}
+
+@media only screen and (min-device-width : 320px)  and (max-device-width : 480px) {
+/* Styles */
+#titulo{
+    font-size: 30px;    
+}
+section:nth-of-type(2){
+    scroll-margin-top: 60px;
+    position: auto;
+}
+#sidenav {
+    vertical-align: middle;
+    height: 100%; 
+    width: 5%;
+    position: fixed; 
+    z-index: 1;
+    top: 0; 
+    left: 0;
+    background: #eee;
+    transition: background .4s;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding: 8% 0px;
+    transition: margin-top .4s;
+  }
+
+.first-column {
+    width: 100%;
+    float: none;
+}
+
+.second-column {
+    width: 100%;
+    float: none;
+}
+#sidenav {padding: 20% 0%;
+    vertical-align: middle;}
+
 }
 
 #contenido{
@@ -128,14 +245,7 @@ footer{
     margin-right: auto;
 }
 
-.row {
-    display: flex;
-  }
-  
-.column {
-    flex: 50%;
-    padding: 5px;
-  }
+
 
 .header {
     padding: 60px;
@@ -143,4 +253,14 @@ footer{
     background: #1abc9c;
     color: white;
     font-size: 30px;
+  }
+
+
+  .row1 {
+    display: flex;
+  }
+  
+.column1 {
+    flex: 50%;
+    padding: 5px;
   }

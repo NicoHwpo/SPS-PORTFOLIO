@@ -1,74 +1,141 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="UTF-8">
     <title>Nicolas Aguirre's Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="/images/logos/logoPFP.png">
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
-  </head>
+</head>
 
 
 
 <body>
-    <nav id="mainNav">
-        <div class="logo">
-            <a href="#">
-                <img src="images/Logoo.png" alt="Logo">
-            </a>
+
+        
+            <nav id="mainNav">
+                <div class="logo">
+                    <a href="#">
+                        <img src="images/logos/logofn.png" id="LogoN">
+                    </a>
+                </div>
+                <ul>
+                    <li>
+                        <a href="#about">ABOUT ME</a>
+                    </li>
+                    <li>
+                        <a href="#">Photo Album</a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/nicolás-aguirre-7a701023a" target="_blank">Connect on
+                            Linkedin!</a>
+                    </li>
+                    <li>
+                        <a href="mailto:nico03aguirre@gmail.com">Contact me</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="first-column">
+                <div id="sidenav">
+                    <a href="https://instagram.com/nicolas_a.v?r=nametag" target="_blank">
+                        <img src="images/logos/instN.png" id="insta">
+                    </a>
+                    <a href="https://www.linkedin.com/in/nicolás-aguirre-7a701023a" target="_blank">
+                        <img src="images/logos/linN.png" id="linke">
+                    </a>
+                    <a href="https://open.spotify.com/user/22gqgagxt6yx4w54fgijachoi?si=ZAUTDoSpRuqiClF6J-Aixg" target="_blank">
+                        <img src="images/logos/spotN.png" id="spot">
+                    </a>
+                    <a href="https://discordapp.com/users/nico-HWPO#6214" target="_blank">
+                        <img src="images/logos/discordN.png" id="disc">
+                    </a>
+                    <a href="mailto:nico03aguirre@gmail.com" target="_blank">
+                        <img src="images/logos/gmailN.png" id="gmail">
+                    </a>
+                    <a href="https://github.com/NicoHwpo" target="_blank">
+                        <img src="images/logos/gitN.png" id="git">
+                    </a>
+                </div>
+            </div>
+            <div class="second-column">
+            <section>
+                <h1 id="titulo">
+                    Nicolás Aguirre Villafañe
+                </h1>
+                <div class="carousel">
+                    <div class="images-container">
+                        <img src="images/photo gallery/2.PNG" />
+                        <img src="images/photo gallery/17.PNG" />
+                        <img src="images/photo gallery/5.PNG" />
+                        <img src="images/photo gallery/6.PNG" />
+                        <img src="images/photo gallery/24.PNG" />
+                        <img src="images/photo gallery/11.PNG" />
+                        <img src="images/photo gallery/12.PNG" />
+                        <img src="images/photo gallery/4.PNG" />
+                        <img src="images/photo gallery/22.PNG" />
+                        <img src="images/photo gallery/8.PNG" />
+                        <img src="images/photo gallery/14.PNG" />
+                        <img src="images/photo gallery/15.PNG" />
+                        <img src="images/photo gallery/16.PNG" />
+                        <img src="images/photo gallery/10.PNG" />
+                        <img src="images/photo gallery/7.PNG" />
+                        <img src="images/photo gallery/19.PNG" />
+                        <img src="images/photo gallery/20.PNG" />
+                        <img src="images/photo gallery/23.PNG" />
+                        <img src="images/photo gallery/13.PNG" />
+                        <img src="images/photo gallery/3.PNG" />
+                    </div>
+                </div>
+
+
+            </section>
+            <section id="about">Sec2
+                <p>         Hi, i'm Nicolas, I'm from Colombia and I am 18 years old. Currently i'm living in Monterrey, Mexico
+                            since I'm in my 2nd year of University (entering my 4th semester).
+                            I like a lot to learn new things, mostly computer/software based things and new technologies, and
+                            also I love to do a lot of exercise.
+                            I've been coding since my fist year of Highschool (15 y/o) and haven't stoped since.</p>
+            </section>
+            <section>Sec3</section>
+
+
+            <!--<div id="titulo">
+            <h1>Nicolas Aguirre</h1>
+            <p>This is my portfolio.</p>
+        </div> -->
+
+
+            <div id="contenido">
+                <div class="row1">
+                    <div class="column1">
+                        <p align="center" style="font-size: 90%;">This is a picture of me in <br> Guatemala on
+                            vacations.</p>
+                        <img src="/images/yo.jpeg" class="yo" />
+                    </div>
+                    <div class="column">
+                        <p align="center" style="font-size: 90%;">This is a picture of my cute cat, <br>his name is
+                            Paul.</p>
+                        <img src="/images/paul.jpeg" class="paul" />
+                    </div>
+                </div>
+                <p>Click <a href="/hello">here</a> to see content created by server code.</p>
+                <p>Click the button below to get a random fact about my self :)</p>
+                <button onclick="addRandomGreeting()" style="position:absolute">Fact</button>
+                <div id="greeting-container"></div>
+                <br>
+                <button onclick="showServerTime();">
+                    Get date
+                </button>
+                <p id="date-container"></p>
+                <p>Click <a href="/date">here</a> to see the server response
+                    directly.<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+
+            </div>
         </div>
-        <ul>
-            <li>
-                <a href="#">Projects</a>
-            </li>
-            <li>
-                <a href="#">Photo Album</a>
-            </li>
-            <li>
-                <a href="#">nose</a>
-            </li>
-            <li>
-                <a href="#">Contact me</a>
-            </li>
-        </ul>
-    </nav>
-    <section>Sec1</section>
-    <section>Sec2</section>
-    <section>Sec3</section>
 
 
-    <!--<div id="titulo">
-        <h1>Nicolas Aguirre</h1>
-        <p>This is my portfolio.</p>
-      </div> -->
-      <div id="contenido">
-        <p>Hi, i'm Nicolas, i'm from Colombia and I am 18 years old. Right now i'm living in Monterrey, Mexico since i'm in my 2nd year of university. 
-      I like a lot to learn new things (mostly computer based things) and also I love to do a lot of exercise.
-      I've been coding since my fist year of Highschool (15 y/o).</p>
-  
-  
-      <div class="row">
-          <div class="column">
-              <p align="center" style="font-size: 90%;">This is a picture of me in <br> Guatemala on vacations.</p>
-          <img src="/images/yo.jpeg" class="yo"/>
-          </div>
-          <div class="column">
-              <p align="center" style="font-size: 90%;">This is a picture of my cute cat, <br>his name is Paul.</p>
-          <img src="/images/paul.jpeg" class="paul"/>
-          </div>
-      </div>
-        <p>Click <a href="/hello">here</a> to see content created by server code.</p>
-        <p>Click here to get a random fact about my self :)</p>
-        <button onclick="addRandomGreeting()" style="position:absolute">Fact</button>
-        <div id="greeting-container"></div>
-        <br>
-        <button onclick="showServerTime();">
-          Get date
-        </button>
-        <p id="date-container"></p>
-        <p>Click <a href="/hello">here</a> to see the server response directly.<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
-  
-      </div>
-
-    <footer>This website is design by Nicolas Aguirre</footer>
+    <!--<footer>This website is design by Nicolas Aguirre</footer>-->
 </body>
+
 </html>
