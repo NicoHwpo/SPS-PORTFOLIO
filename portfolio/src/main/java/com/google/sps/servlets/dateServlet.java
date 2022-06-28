@@ -9,11 +9,11 @@ import javax.servlet.http.HttpServletResponse;
 
 /** Servlet that responds with the current date. */
 @WebServlet("/date")
-public class factServlet extends HttpServlet {
+public class dateServlet extends HttpServlet {
 
   @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
     response.setContentType("text/html;");
-    response.getWriter().println("The server's current date is " + new Date());
+    response.getWriter().println( new Date());
   }
 }
