@@ -15,37 +15,32 @@
 /**
  * Adds a random greeting to the page.
  */
-function addRandomGreeting() {
-  const greetings =
-      ['For 7 years i lived in Guatemala', 'I live alone in Mexico', 'My favorite movie is interestellar', 'Im studying Software Ingeneering at Tecnologico de Monterrey', 'I have created a 2D & 3D games'];
 
+async function fetchInfo() {
+    const response = await fetch('/form-handler');
+    const nameListHtml = await response.text();
+    document.getElementById('info-list').innerHTML = nameListHtml;
+  }
+
+async function addMessages() {
+    const responseFromServer = await fetch('/messages');
+    const messages = await responseFromServer.json();
+    // Add it to the page.
+    const messageContainer = document.getElementById('message-container');
+    messageContainer.innerHTML = messages;
+  }
+
+
+async function addRandomQuote() {
+  const responseFromServer = await fetch('/json');
+  const quotes = await responseFromServer.json();
   // Pick a random greeting.
-  const greeting = greetings[Math.floor(Math.random() * greetings.length)];
+  const quote = quotes[Math.floor(Math.random() * quotes.length)];
 
   // Add it to the page.
-  const greetingContainer = document.getElementById('greeting-container');
-  greetingContainer.innerText = greeting;
+  const quoteContainer = document.getElementById('quote-container');
+  quoteContainer.innerHTML = quote;
 }
-
-function addRandomQuote() {
-    const quotes =
-        ['"If you are good at something, never do it for free."', 
-        '"The Pain of regret is worse than the pain of discipline."',
-        '"Every morning you have two choices, continue to sleep with your dreams, or wake up and chase them."',
-        '"No man has the right to be an amateur in the matter of physical training. It is a shame for a man to grow old without seeing the beauty and strength of which his body is capable."',
-        '"You only get one body... take care of it."',
-        '"Never reply when you are angry. Never make a promise when you are happy. Never make a decision when you are sad."',
-        '"If you want something you have never had, you must be willing to do something you have never done."',
-        '"It is okay to be weak. But it is not okay to stay weak."'];
-    
-  
-    // Pick a random greeting.
-    const quote = quotes[Math.floor(Math.random() * quotes.length)];
-  
-    // Add it to the page.
-    const quoteContainer = document.getElementById('quote-container');
-    quoteContainer.innerText = quote;
-  }
 
 async function showServerTime() {
     const responseFromServer = await fetch('/date');
